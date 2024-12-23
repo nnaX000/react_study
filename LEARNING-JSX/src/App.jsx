@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 
+
+const isLoggedIn = true
 const eleement1=<h2>Hello, World</h2>
 const element2=(
   <ul>
@@ -78,17 +80,25 @@ function FunctionExpressions() {
 }
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
+  const fruits = ["Apple", "Banana", "Cherry"]
 
   return (
     <>
-      <h1>JSX</h1>
-      <FunctionExpressions/>
+      {/* <h1>JSX</h1> */}
+      {/* <FunctionExpressions/>
       <br/>
       {language}
-      <BasicExpressions/>
-      <ObjectArrayExpressions/>
-      {isLoggedIn ? <h1>Hello!</h1> : <h1>Sign in</h1>}
+      <BasicExpressions/> */}
+      {/* <ObjectArrayExpressions/> */}
+      {/* {isLoggedIn ? <h1>Hello!</h1> : <h1>Sign in</h1>} */}
+
+      <ul>
+        {fruits.map((fruit,index) => (
+          <li key={index}>{index} {fruit}</li>
+        ))}
+      </ul>
+
     </>
   )
 }
